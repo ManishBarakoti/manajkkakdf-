@@ -1,0 +1,20 @@
+/* Nav link gold underline hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  transition: width 0.35s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* App-level overrides */
+.App { overflow-x: hidden; }
+
+/* Section transitions */
+section { position: relative; }
