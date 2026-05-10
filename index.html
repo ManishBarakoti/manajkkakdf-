@@ -15,6 +15,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preconnect" href="https://randomuser.me" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
@@ -62,6 +64,8 @@
       </div>
 
       <div class="hero__visual reveal" data-delay="2" aria-hidden="true">
+        <img class="hero__photo" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" alt="Students in a classroom" />
+        <div class="hero__photo-overlay"></div>
         <div class="hero__visual-inner">
           <div class="hero__rank-card">
             <div class="rank"><small>AIR</small>42</div>
@@ -262,6 +266,42 @@
     </div>
   </section>
 
+  <!-- Campus Life -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--between">
+        <div>
+          <span class="eyebrow">Inside Our Campus</span>
+          <h2 style="max-width:20ch">Life at Manish Academy &mdash; a real look inside.</h2>
+        </div>
+        <a class="btn btn-ghost" href="about.html">About the institute</a>
+      </div>
+
+      <div class="gallery reveal">
+        <div class="gallery__item gallery__item--tall">
+          <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80" alt="Classroom lecture in progress" loading="lazy" />
+          <span class="gallery__caption">Lecture hall</span>
+        </div>
+        <div class="gallery__item gallery__item--wide">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80" alt="Students studying at library" loading="lazy" />
+          <span class="gallery__caption">Library</span>
+        </div>
+        <div class="gallery__item">
+          <img src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&w=700&q=80" alt="Chemistry lab session" loading="lazy" />
+          <span class="gallery__caption">Chemistry lab</span>
+        </div>
+        <div class="gallery__item">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=700&q=80" alt="Teacher explaining at the board" loading="lazy" />
+          <span class="gallery__caption">Doubt clearing</span>
+        </div>
+        <div class="gallery__item gallery__item--wide">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80" alt="Group study session" loading="lazy" />
+          <span class="gallery__caption">Peer study groups</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Faculty preview -->
   <section class="section">
     <div class="container">
@@ -275,7 +315,7 @@
 
       <div class="grid-4">
         <article class="faculty-card reveal">
-          <div class="faculty-card__photo"><div class="avatar">RK</div><span class="faculty-card__tag">Physics</span></div>
+          <div class="faculty-card__photo"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Portrait of Dr. Rajeev Kumar" loading="lazy" /><span class="faculty-card__tag">Physics</span></div>
           <div class="faculty-card__body">
             <h3>Dr. Rajeev Kumar</h3>
             <p class="faculty-card__sub">JEE Physics &middot; Head of Department</p>
@@ -287,7 +327,7 @@
         </article>
 
         <article class="faculty-card reveal" data-delay="1">
-          <div class="faculty-card__photo"><div class="avatar">SM</div><span class="faculty-card__tag">Chemistry</span></div>
+          <div class="faculty-card__photo"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Portrait of Dr. Shalini Mishra" loading="lazy" /><span class="faculty-card__tag">Chemistry</span></div>
           <div class="faculty-card__body">
             <h3>Dr. Shalini Mishra</h3>
             <p class="faculty-card__sub">Organic &amp; Inorganic Chemistry</p>
@@ -299,7 +339,7 @@
         </article>
 
         <article class="faculty-card reveal" data-delay="2">
-          <div class="faculty-card__photo"><div class="avatar">AP</div><span class="faculty-card__tag">Biology</span></div>
+          <div class="faculty-card__photo"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Portrait of Dr. Anup Pandey" loading="lazy" /><span class="faculty-card__tag">Biology</span></div>
           <div class="faculty-card__body">
             <h3>Dr. Anup Pandey</h3>
             <p class="faculty-card__sub">NEET Biology Specialist</p>
@@ -311,7 +351,7 @@
         </article>
 
         <article class="faculty-card reveal" data-delay="3">
-          <div class="faculty-card__photo"><div class="avatar">VS</div><span class="faculty-card__tag">Mathematics</span></div>
+          <div class="faculty-card__photo"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Portrait of Vikram Singh" loading="lazy" /><span class="faculty-card__tag">Mathematics</span></div>
           <div class="faculty-card__body">
             <h3>Vikram Singh</h3>
             <p class="faculty-card__sub">JEE Advanced &amp; NDA Maths</p>
@@ -338,7 +378,7 @@
 
       <div class="grid-3">
         <article class="topper-card reveal">
-          <div class="topper-card__avatar">AS</div>
+          <div class="topper-card__avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ananya Srivastava" loading="lazy" /></div>
           <div class="topper-card__info">
             <p class="topper-card__name">Ananya Srivastava</p>
             <p class="topper-card__exam">NEET UG &middot; Medical</p>
@@ -348,7 +388,7 @@
         </article>
 
         <article class="topper-card reveal" data-delay="1">
-          <div class="topper-card__avatar">RT</div>
+          <div class="topper-card__avatar"><img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Raghav Tripathi" loading="lazy" /></div>
           <div class="topper-card__info">
             <p class="topper-card__name">Raghav Tripathi</p>
             <p class="topper-card__exam">JEE Advanced &middot; IIT Delhi</p>
@@ -358,7 +398,7 @@
         </article>
 
         <article class="topper-card reveal" data-delay="2">
-          <div class="topper-card__avatar">MY</div>
+          <div class="topper-card__avatar"><img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Mayank Yadav" loading="lazy" /></div>
           <div class="topper-card__info">
             <p class="topper-card__name">Mayank Yadav</p>
             <p class="topper-card__exam">NDA I &middot; Indian Army</p>
@@ -368,7 +408,7 @@
         </article>
 
         <article class="topper-card reveal">
-          <div class="topper-card__avatar">PV</div>
+          <div class="topper-card__avatar"><img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Priyanshi Verma" loading="lazy" /></div>
           <div class="topper-card__info">
             <p class="topper-card__name">Priyanshi Verma</p>
             <p class="topper-card__exam">CUET UG &middot; Hindu College, DU</p>
@@ -378,7 +418,7 @@
         </article>
 
         <article class="topper-card reveal" data-delay="1">
-          <div class="topper-card__avatar">HS</div>
+          <div class="topper-card__avatar"><img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Harshit Shukla" loading="lazy" /></div>
           <div class="topper-card__info">
             <p class="topper-card__name">Harshit Shukla</p>
             <p class="topper-card__exam">JEE Main &middot; NIT Trichy</p>
@@ -388,7 +428,7 @@
         </article>
 
         <article class="topper-card reveal" data-delay="2">
-          <div class="topper-card__avatar">NK</div>
+          <div class="topper-card__avatar"><img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Nidhi Kesarwani" loading="lazy" /></div>
           <div class="topper-card__info">
             <p class="topper-card__name">Nidhi Kesarwani</p>
             <p class="topper-card__exam">NEET UG &middot; AIIMS Patna</p>
@@ -413,7 +453,7 @@
           <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>The Physics problem-solving sessions made Advanced-level questions feel doable. My teacher tracked every weekly test and changed my plan when I got stuck on rotational dynamics. That level of attention is rare.</p>
           <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">RT</div>
+            <div class="testimonial-card__avatar"><img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Raghav Tripathi" loading="lazy" /></div>
             <div>
               <p class="testimonial-card__name">Raghav Tripathi</p>
               <p class="testimonial-card__meta">JEE Advanced 2024 &middot; IIT Delhi</p>
@@ -425,7 +465,7 @@
           <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>We stay in Naini and I was worried about a long commute. The Saturday parent-mentor calls genuinely kept us in the loop &mdash; we saw our daughter's score graph go up every month. Worth every rupee.</p>
           <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">SP</div>
+            <div class="testimonial-card__avatar"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Mrs. Seema Pandey" loading="lazy" /></div>
             <div>
               <p class="testimonial-card__name">Mrs. Seema Pandey</p>
               <p class="testimonial-card__meta">Parent &middot; NEET 2024 aspirant</p>
@@ -437,7 +477,7 @@
           <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>SSB guidance at Manish Academy is no joke. They run group discussions and personal interviews weekly. By the time I reached Allahabad SSB centre, nothing was new to me. Cleared in first attempt.</p>
           <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">MY</div>
+            <div class="testimonial-card__avatar"><img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Mayank Yadav" loading="lazy" /></div>
             <div>
               <p class="testimonial-card__name">Mayank Yadav</p>
               <p class="testimonial-card__meta">NDA 2024 &middot; Indian Army</p>

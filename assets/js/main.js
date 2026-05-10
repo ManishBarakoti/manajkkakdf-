@@ -35,6 +35,9 @@
     book: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
   };
 
+  // Logo mark (graduation cap)
+  const logoSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v4c0 1.5 3 3 6 3s6-1.5 6-3v-4"/><path d="M22 10v6"/></svg>`;
+
   // ---------- Header ----------
   const NAV_ITEMS = [
     { href: "index.html", label: "Home", match: ["", "index.html"] },
@@ -66,7 +69,7 @@
       <header class="nav" id="siteNav" role="banner">
         <div class="container nav__row">
           <a class="brand" href="index.html" aria-label="${BRAND.name} home">
-            <span class="brand__mark" aria-hidden="true">MA</span>
+            <span class="brand__mark" aria-hidden="true">${logoSvg}</span>
             <span class="brand__name">${BRAND.name}<small>${BRAND.tagline}</small></span>
           </a>
           <nav aria-label="Primary">
@@ -96,7 +99,7 @@
           <div class="footer__top">
             <div class="footer__brand">
               <a class="brand" href="index.html" aria-label="${BRAND.name} home">
-                <span class="brand__mark" aria-hidden="true">MA</span>
+                <span class="brand__mark" aria-hidden="true">${logoSvg}</span>
                 <span class="brand__name" style="color:#fff">${BRAND.name}<small>${BRAND.tagline}</small></span>
               </a>
               <p class="footer__about">Preparing serious aspirants for IIT-JEE, NEET, CUET, NDA and Foundation since 2008. Small batches, strong faculty, measurable results.</p>

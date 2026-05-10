@@ -207,26 +207,25 @@ p { margin: 0 0 1em; }
   letter-spacing: -0.01em;
 }
 .brand__mark {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
-  background: var(--navy-800);
-  color: #fff;
+  background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-700) 100%);
   display: grid;
   place-items: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.05rem;
   position: relative;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08), 0 2px 8px -2px rgba(11,30,63,.3);
+  flex-shrink: 0;
 }
+.brand__mark svg { width: 24px; height: 24px; color: #fff; }
 .brand__mark::after {
   content: "";
   position: absolute;
-  inset: auto 6px 6px auto;
-  width: 8px; height: 8px;
+  bottom: 5px; right: 5px;
+  width: 7px; height: 7px;
   background: var(--orange-500);
   border-radius: 2px;
+  box-shadow: 0 0 0 2px rgba(11,30,63,.95);
 }
 .brand__name small {
   display: block;
@@ -1017,3 +1016,210 @@ p { margin: 0 0 1em; }
 .kbd-note { font-size: .8rem; color: var(--ink-400); }
 .hide-desktop { display: none; }
 @media (max-width: 900px) { .hide-desktop { display: initial; } .hide-mobile { display: none; } }
+
+
+/* =========================================================
+   Real-image enhancements (added)
+   ========================================================= */
+
+/* Hero with real photo */
+.hero__photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.hero__photo-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(200deg, rgba(7,22,52,.25) 0%, rgba(7,22,52,.55) 50%, rgba(7,22,52,.95) 100%);
+  z-index: 1;
+}
+.hero__visual .hero__visual-inner {
+  background: transparent;
+  z-index: 2;
+}
+.hero__visual .hero__visual-inner::before { display: none; }
+
+/* Faculty card — real portrait */
+.faculty-card__photo { background: var(--navy-800); }
+.faculty-card__photo img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform .5s var(--ease);
+  z-index: 1;
+}
+.faculty-card:hover .faculty-card__photo img { transform: scale(1.04); }
+.faculty-card__photo::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(7,22,52,.45) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+.faculty-card__tag { z-index: 3; }
+
+/* Topper — real photo */
+.topper-card__avatar { overflow: hidden; padding: 0; }
+.topper-card__avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Testimonial avatar — real photo */
+.testimonial-card__avatar { overflow: hidden; }
+.testimonial-card__avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Principal — real photo */
+.principal__card { padding: 0; overflow: hidden; }
+.principal__photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+}
+.principal__card .principal__initials { display: none; }
+.principal__overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7,22,52,0) 35%, rgba(7,22,52,.55) 70%, rgba(7,22,52,.92) 100%);
+  z-index: 1;
+}
+.principal__info {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 22px 26px;
+  z-index: 2;
+}
+
+/* Campus gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 14px;
+}
+.gallery__item {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--navy-800);
+  box-shadow: var(--shadow-1);
+}
+.gallery__item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease);
+}
+.gallery__item:hover img { transform: scale(1.04); }
+.gallery__item--tall { grid-row: span 2; }
+.gallery__item--wide { grid-column: span 2; }
+.gallery__caption {
+  position: absolute;
+  left: 14px; bottom: 14px;
+  color: #fff;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5px 12px;
+  background: rgba(7,22,52,.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--r-pill);
+  border: 1px solid rgba(255,255,255,.12);
+}
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
+  .gallery__item--tall { grid-row: span 1; }
+  .gallery__item--wide { grid-column: span 2; }
+}
+
+/* Contact / About campus banner */
+.campus-banner {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  aspect-ratio: 21 / 9;
+  background: var(--navy-800);
+  box-shadow: var(--shadow-2);
+}
+.campus-banner img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.campus-banner::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(7,22,52,.6) 0%, rgba(7,22,52,.3) 40%, rgba(7,22,52,0) 70%);
+}
+.campus-banner__caption {
+  position: absolute;
+  left: clamp(20px, 4vw, 44px);
+  bottom: clamp(20px, 4vw, 40px);
+  color: #fff;
+  z-index: 2;
+  max-width: 28ch;
+}
+.campus-banner__caption .eyebrow { color: var(--orange-400); margin-bottom: 10px; }
+.campus-banner__caption h3 { color: #fff; font-size: clamp(1.3rem, 2vw, 1.9rem); margin: 0; }
+@media (max-width: 640px) { .campus-banner { aspect-ratio: 4 / 3; } }
+
+
+/* Course section hero image */
+.course-hero {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  aspect-ratio: 20 / 9;
+  background: var(--navy-800);
+  margin-bottom: 44px;
+  box-shadow: var(--shadow-2);
+}
+.course-hero img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.course-hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7,22,52,.85) 0%, rgba(7,22,52,.55) 40%, rgba(7,22,52,0) 75%);
+}
+.course-hero__caption {
+  position: absolute;
+  left: clamp(24px, 4vw, 48px);
+  bottom: clamp(20px, 4vw, 40px);
+  color: #fff;
+  z-index: 2;
+  max-width: 32ch;
+}
+.course-hero__caption .tag {
+  display: inline-block;
+  background: var(--orange-500);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.course-hero__caption h2 { color: #fff; font-size: clamp(1.5rem, 2.2vw, 2.1rem); margin: 0 0 6px; }
+.course-hero__caption p { color: #cfd6e6; margin: 0; font-size: .95rem; }
+@media (max-width: 640px) {
+  .course-hero { aspect-ratio: 4 / 3; }
+}
